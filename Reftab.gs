@@ -8,7 +8,7 @@ function Reftab(options) {
     request.contentType = 'application/json';
    
     let md5 = str =>
-      Utilities.computeDigest(Utilities.DigestAlgorithm.MD5, str).reduce((str, chr) => {
+      Utilities.computeDigest(Utilities.DigestAlgorithm.MD5, str, Utilities.Charset.UTF_8).reduce((str, chr) => {
         chr = (chr < 0 ? chr + 256 : chr).toString(16);
         return `${str}${chr.length == 1 ? '0' : ''}${chr}`;
       }, '');
