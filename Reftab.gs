@@ -58,7 +58,7 @@ ${request.url}`
   }
   
   this.post = function(endpoint, body) {
-    return this.request('PUT', endpoint, undefined, body);
+    return this.request('POST', endpoint, undefined, body);
   }
   
   this.delete = function(endpoint, id) {
